@@ -11,4 +11,4 @@ A mobile friendly version of nooooooooooooooo.com
 
 
 
-[1][http://no.benjamincharity.com] "Nooo"
+[1]: http://no.benjamincharity.com "Nooo"

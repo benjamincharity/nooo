@@ -13,33 +13,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-  <link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>
+  <!--<link href='http://fonts.googleapis.com/css?family=Londrina+Sketch' rel='stylesheet' type='text/css'>-->
 
   <style type="text/css">
 
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
     body {
-      background-color: #fafafa;
-      font-family: 'Londrina Sketch', cursive;
+      background: url(vader.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #222;
+      font-family: 'Helvetica Neue', Helvetica, sans-serif;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .window {
+      height: 100%;
+      padding-top: 11.5em;
+      position: relative;
+      width: 100%;
     }
 
     .no {
-      background-color: lightblue;
-      border: none;
+      background-color: rgba(255,255,255,0.5);
+      border: 1px solid rgba(255,255,255,0.5);
+      border-radius: 4px;
       color: white;
       cursor: pointer;
       display: block;
-      font-family: 'Londrina Sketch', cursive;
       font-size: 40px;
-      height: 200px;
+      font-weight: 800;
       margin: 0 auto;
-      max-width: 400px;
+      max-width: 230px;
+      padding: 2%;
       text-transform: uppercase;
+      transition: 200ms all ease-in-out;
       width: 80%;
     }
 
     .no:focus,
-    .no:active {
+    .no:active,
+    .no:hover {
+      background-color: rgba(255,255,255,0.7);
+      text-shadow: 1px 1px 1px #999;
       outline: none;
+    }
+
+    .cover-my-ass {
+      background-color: rgba(255,255,255,0.8);
+      font-size: 12px;
+      font-weight: 200;
+      letter-spacing: .1em;
+      padding: 1em .4em;
+      position: absolute;
+      bottom: 4%;
+      width: 100%;
+    }
+
+    .cover-my-ass p {
+      margin: 0 auto;
+      max-width: 500px;
+      text-align: center;
+      width: 90%;
+    }
+
+    .cover-my-ass a {
+      color: #222;
     }
 
   </style>
@@ -49,15 +98,27 @@
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <button class="no">Nooo</button>
+  <div class="window">
+    <button class="no">Nooo</button>
 
-  <audio autoplay="autoplay">
-    <source src="" type='audio/mpeg; codecs="mp3"'>
-  </audio>
+    <audio autoplay="autoplay">
+      <source src="" type='audio/mpeg; codecs="mp3"'>
+    </audio>
+
+
+    <div class="cover-my-ass">
+      <p>This site is in no way affiliated with Star Wars, Darth Vader or the
+      original <a href="http://nooooooooooooooo.com/">nooooooooooooooo.com</a>. I
+      simply wanted to make that awesome idea available on mobile for your
+      on-the-go dire situations. Quickly made by
+      <a href="https://github.com/benjamincharity">@benjamincharity</a>.</p>
+    </div>
+  </div>
 
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
-    var audioFiles = ["shia", "lotr_sw", "karisma"];
+    //var audioFiles = ["shia", "lotr_sw", "karisma"];
+    var audioFiles = ["starwars-no"];
     var $button = $('.no');
     var audio;
     var $destination = $('source');
